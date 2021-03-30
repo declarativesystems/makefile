@@ -15,10 +15,12 @@ ifdef git_tag
 	# on a release tag
 	final_version = $(git_tag)
 	container_version = $(git_tag)
+	python_version = $(git_tag)
 else
 	# snapshot build
 	final_version = $(base_version)-$(git_rev)
 	container_version = $(base_version)-$(git_rev)
+	python_version = $(base_version)+$(git_rev)
 endif
 
 print_version:
