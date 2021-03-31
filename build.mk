@@ -26,6 +26,9 @@ endif
 print_version:
 	@echo $(final_version)
 
+print_version_python:
+	@echo $(python_version)
+
 ci_image_push:
 	$(CONTAINER_CMD) push $(ci_image_name):$(container_version)
 
