@@ -16,5 +16,9 @@ ci_notify_failure:
 ci_notify_complete:
 	$(call send_slack_msg,"👍 build OK! $(project):$(git_rev)\n $(commit_title)")
 
+ci_notify_deployed:
+	$(call send_slack_msg,"🎬 deployed to prod OK! $(project):$(git_rev)\n $(commit_title)")
+
+
 print_project:
 	@echo $(project)
